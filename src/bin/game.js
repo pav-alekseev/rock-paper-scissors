@@ -15,5 +15,8 @@ const playRound = (player, computer) => {
     return 0;
   }
 
-  const 
+  const computerCovering = shapes[(shapes.indexOf(computer) + 1) % shapes.length];
+  return player === computerCovering ? 1 : -1;
 };
+
+module.exports = { playRound };
