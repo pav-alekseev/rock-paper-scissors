@@ -36,8 +36,13 @@
     "eslint-plugin-import": "^2.16.0",
     "jest": "^24.0.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "readline-sync": "^1.4.9"
+  },
   "jest": {
-    "testPathIgnorePatterns": ["<rootDir>/dist", "rootDir>/node_modules"]
+    "testPathIgnorePatterns": [
+      "<rootDir>/dist",
+      "rootDir>/node_modules"
+    ]
   }
 }
