@@ -1,5 +1,5 @@
 start:
-	npx babel-node -- src/game.js
+	npx babel-node -- src/bin/rock-paper-scissors.js
 
 lint:
 	npx eslint .
