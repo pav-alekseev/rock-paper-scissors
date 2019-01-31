@@ -41,8 +41,8 @@
   },
   "jest": {
     "testPathIgnorePatterns": [
-      "<rootDir>/dist",
-      "rootDir>/node_modules"
+      "<rootDir>/dist/",
+      "<rootDir>/node_modules/"
     ]
   },
   "babel": {
