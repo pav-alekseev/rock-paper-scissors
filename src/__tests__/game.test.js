@@ -1,4 +1,4 @@
-import playRound from '../bin/game';
+import playRound from '../game';
 
 test('Check the condition of the game', () => {
   const playerWin = 1;
