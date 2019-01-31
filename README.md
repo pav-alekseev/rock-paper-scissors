@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/RukkiesMan/rock-paper-scissors.svg?branch=master)](https://travis-ci.org/RukkiesMan/rock-paper-scissors)
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
-The project is an console implementation of grade-school classic “rock paper scissors”
+The project is an implementation of grade-school classic “rock paper scissors”
 
 ## Preview
 
