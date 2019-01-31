@@ -6,7 +6,7 @@
     "dist"
   ],
   "bin": {
-    "rock-paper-scissors": "src/bin/rock-paper-scissors.js"
+    "rock-paper-scissors": "dist/bin/rock-paper-scissors.js"
   },
   "scripts": {
     "test": "jest",
