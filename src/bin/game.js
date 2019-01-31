@@ -1,4 +1,4 @@
-import { chooseElement, getRandomElements } from '../utilities';
+import { chooseElement, getRandomElement } from '../utilities';
 
 const shapes = ['rock', 'paper', 'scissors'];
 

@@ -9,4 +9,4 @@ const chooseElement = (array) => {
 
 const getRandomElement = array => array[generateNumber(0, array.length)];
 
-module.exports = { chooseElement, getRandomElement };
+export { chooseElement, getRandomElement };
