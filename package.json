@@ -1,6 +1,6 @@
 {
   "name": "rock-paper-scissors-rukkiesman",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "An implementation of grade-school classic “rock paper scissors”",
   "files": [
     "dist"
@@ -47,14 +47,17 @@
   },
   "babel": {
     "presets": [
-      ["@babel/env", {
-        "targets": {
-          "node": "current",
-          "firefox": "60",
-          "chrome": "67",
-          "safari": "11.1"
+      [
+        "@babel/env",
+        {
+          "targets": {
+            "node": "current",
+            "firefox": "60",
+            "chrome": "67",
+            "safari": "11.1"
+          }
         }
-      }]
+      ]
     ],
     "sourceMaps": true,
     "retainLines": true
