@@ -1,3 +1,3 @@
-const generateRandomNumber = (min, max) => Math.random() * (max - min) + min;
+const generateNumber = (min, max) => Math.random() * (max - min) + min;
 
-module.exports = { generateRandomNumber };
+module.exports = { generateNumber };
