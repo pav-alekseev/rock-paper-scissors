@@ -2,9 +2,6 @@
   "name": "rock-paper-scissors-rukkiesman",
   "version": "1.0.0",
   "description": "An implementation of grade-school classic “rock paper scissors”",
-  "bin": {
-    "game": "dist/game.js"
-  },
   "files": [
     "dist"
   ],
