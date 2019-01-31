@@ -1,5 +1,5 @@
 start:
-	npx babel-node -- src/bin/game.js
+	npx babel-node -- src/game.js
 
 lint:
 	npx eslint .
