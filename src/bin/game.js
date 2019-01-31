@@ -19,4 +19,4 @@ const playRound = (player, computer) => {
   return player === computerCovering ? 1 : -1;
 };
 
-module.exports = { playRound };
+export default playRound;
