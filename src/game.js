@@ -3,13 +3,13 @@ import { chooseElement, getRandomElement } from './utilities';
 
 const shapes = ['rock', 'paper', 'scissors'];
 
-const playRound = (player, computer) => {
-  if (player === computer) {
+const playRound = (playersShape, computersShape) => {
+  if (playersShape === computersShape) {
     return 0;
   }
 
-  const computerCovering = shapes[(shapes.indexOf(computer) + 1) % shapes.length];
-  return player === computerCovering ? 1 : -1;
+  const computerCovering = shapes[(shapes.indexOf(computersShape) + 1) % shapes.length];
+  return playersShape === computerCovering ? 1 : -1;
 };
 
 const game = (numberOfRounds) => {
@@ -30,16 +30,16 @@ const game = (numberOfRounds) => {
     console.log(`Player: ${playerScore}`);
     console.log(`Computer: ${computerScore}`);
 
-    const player = chooseElement(shapes);
-    const computer = getRandomElement(shapes);
+    const playerShape = chooseElement(shapes);
+    const computerShape = getRandomElement(shapes);
 
-    switch (playRound(player, computer)) {
+    switch (playRound(playerShape, computerShape)) {
       case 1:
-        console.log(`You won! ${player.toUpperCase()} beats ${computer.toUpperCase()}`);
+        console.log(`You won! ${playerShape.toUpperCase()} beats ${computerShape.toUpperCase()}`);
         iter(currentRound + 1, playerScore + 1, computerScore);
         break;
       case -1:
-        console.log(`You won! ${computer.toUpperCase()} beats ${player.toUpperCase()}`);
+        console.log(`You won! ${computerShape.toUpperCase()} beats ${playerShape.toUpperCase()}`);
         iter(currentRound + 1, playerScore, computerScore + 1);
         break;
       default:
