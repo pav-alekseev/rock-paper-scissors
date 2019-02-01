@@ -3,13 +3,18 @@ import { chooseElement, getRandomElement } from './utilities';
 
 const shapes = ['rock', 'paper', 'scissors'];
 
+const players = {
+  player: Symbol('player'),
+  computer: Symbol('computer'),
+};
+
 const playRound = (playersShape, computersShape) => {
   if (playersShape === computersShape) {
-    return 0;
+    return null;
   }
 
   const computerCovering = shapes[(shapes.indexOf(computersShape) + 1) % shapes.length];
-  return playersShape === computerCovering ? 1 : -1;
+  return playersShape === computerCovering ? players.player : players.computer;
 };
 
 const game = (numberOfRounds) => {
@@ -34,11 +39,11 @@ const game = (numberOfRounds) => {
     const computerShape = getRandomElement(shapes);
 
     switch (playRound(playerShape, computerShape)) {
-      case 1:
+      case players.player:
         console.log(`You won! ${playerShape.toUpperCase()} beats ${computerShape.toUpperCase()}`);
         iter(currentRound + 1, playerScore + 1, computerScore);
         break;
-      case -1:
+      case players.computer:
         console.log(`You won! ${computerShape.toUpperCase()} beats ${playerShape.toUpperCase()}`);
         iter(currentRound + 1, playerScore, computerScore + 1);
         break;
@@ -51,4 +56,4 @@ const game = (numberOfRounds) => {
   iter(1, 0, 0);
 };
 
-export { playRound, game };
+export { players, playRound, game };

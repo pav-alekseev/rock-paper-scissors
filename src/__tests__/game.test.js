@@ -1,17 +1,13 @@
-import { playRound } from '../game';
+import { players, playRound } from '../game';
 
 test('Check the condition of the game', () => {
-  const playerWin = 1;
-  const draw = 0;
-  const computerWin = -1;
-
-  expect(playRound('rock', 'scissors')).toBe(playerWin);
-  expect(playRound('rock', 'rock')).toBe(draw);
-  expect(playRound('rock', 'paper')).toBe(computerWin);
-  expect(playRound('scissors', 'scissors')).toBe(draw);
-  expect(playRound('scissors', 'rock')).toBe(computerWin);
-  expect(playRound('scissors', 'paper')).toBe(playerWin);
-  expect(playRound('paper', 'scissors')).toBe(computerWin);
-  expect(playRound('paper', 'rock')).toBe(playerWin);
-  expect(playRound('paper', 'paper')).toBe(draw);
+  expect(playRound('rock', 'scissors')).toBe(players.player);
+  expect(playRound('rock', 'rock')).toBeNull();
+  expect(playRound('rock', 'paper')).toBe(players.computer);
+  expect(playRound('scissors', 'scissors')).toBeNull();
+  expect(playRound('scissors', 'rock')).toBe(players.computer);
+  expect(playRound('scissors', 'paper')).toBe(players.player);
+  expect(playRound('paper', 'scissors')).toBe(players.computer);
+  expect(playRound('paper', 'rock')).toBe(players.player);
+  expect(playRound('paper', 'paper')).toBeNull();
 });
