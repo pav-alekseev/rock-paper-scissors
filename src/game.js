@@ -17,9 +17,15 @@ const playRound = (playersShape, computersShape) => {
   return playersShape === computerCovering ? players.player : players.computer;
 };
 
+const showScores = (currentRound, playerScore, computerScore) => {
+  console.log('--------------------------------');
+  console.log(`Round ${currentRound}`);
+  console.log(`Player: ${playerScore}`);
+  console.log(`Computer: ${computerScore}`);
+};
+
 const game = (numberOfRounds) => {
   const iter = (currentRound, playerScore, computerScore) => {
-    console.log('--------------------------------');
     if (currentRound > numberOfRounds) {
       if (playerScore > computerScore) {
         console.log('Congratulations! You are the winner!');
@@ -31,9 +37,7 @@ const game = (numberOfRounds) => {
       return;
     }
 
-    console.log(`Round ${currentRound}`);
-    console.log(`Player: ${playerScore}`);
-    console.log(`Computer: ${computerScore}`);
+    showScores(currentRound, playerScore, computerScore);
 
     const playerShape = chooseElement(shapes);
     const computerShape = getRandomElement(shapes);
