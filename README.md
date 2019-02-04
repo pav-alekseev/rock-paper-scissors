@@ -3,11 +3,21 @@
 [![Build Status](https://travis-ci.org/RukkiesMan/rock-paper-scissors.svg?branch=master)](https://travis-ci.org/RukkiesMan/rock-paper-scissors)
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
-The project is an implementation of grade-school classic “rock paper scissors”
+The project is a console implementation of grade-school classic “rock paper scissors”
 
-## Preview
+## Requirements
+* Node
+```sh
+$ sudo apt-get install node
+```
 
-Check preview of the project: [Rock Paper Scissors](https://rukkiesman.github.io/rock-paper-scissors)
+## Installation
+```sh
+$ sudo npm install -g rock-paper-scissors-rukkiesman
+```
+
+## Gameplay
+[![asciicast](https://asciinema.org/a/VELEvV5fGtcO25puCUFY8OBV9.svg)](https://asciinema.org/a/VELEvV5fGtcO25puCUFY8OBV9)
 
 ## License
 
