@@ -24,16 +24,20 @@ const showScores = (currentRound, playerScore, computerScore) => {
   console.log(`Computer: ${computerScore}`);
 };
 
+const showWinner = (playerScore, computerScore) => {
+  if (playerScore > computerScore) {
+    console.log('Congratulations! You are the winner!');
+  } else if (playerScore < computerScore) {
+    console.log('Oh no! Computer is the winner! It looks like rise of the machines!');
+  } else {
+    console.log('Draw! No one is the winner');
+  }
+};
+
 const game = (numberOfRounds) => {
   const iter = (currentRound, playerScore, computerScore) => {
     if (currentRound > numberOfRounds) {
-      if (playerScore > computerScore) {
-        console.log('Congratulations! You are the winner!');
-      } else if (playerScore < computerScore) {
-        console.log('Oh no! Computer is the winner! It looks like rise of the machines!');
-      } else {
-        console.log('Draw! No one is the winner');
-      }
+      showWinner(playerScore, computerScore);
       return;
     }
 
@@ -41,19 +45,17 @@ const game = (numberOfRounds) => {
 
     const playerShape = chooseElement(shapes);
     const computerShape = getRandomElement(shapes);
+    const roundWinner = playRound(playerShape, computerShape);
 
-    switch (playRound(playerShape, computerShape)) {
-      case players.player:
-        console.log(`You won! ${playerShape.toUpperCase()} beats ${computerShape.toUpperCase()}`);
-        iter(currentRound + 1, playerScore + 1, computerScore);
-        break;
-      case players.computer:
-        console.log(`You won! ${computerShape.toUpperCase()} beats ${playerShape.toUpperCase()}`);
-        iter(currentRound + 1, playerScore, computerScore + 1);
-        break;
-      default:
-        console.log('Draw!');
-        iter(currentRound + 1, playerScore, computerScore);
+    if (roundWinner === players.player) {
+      console.log(`You won! ${playerShape.toUpperCase()} beats ${computerShape.toUpperCase()}`);
+      iter(currentRound + 1, playerScore + 1, computerScore);
+    } else if (roundWinner === players.computer) {
+      console.log(`You won! ${computerShape.toUpperCase()} beats ${playerShape.toUpperCase()}`);
+      iter(currentRound + 1, playerScore, computerScore + 1);
+    } else {
+      console.log('Draw!');
+      iter(currentRound + 1, playerScore, computerScore);
     }
   };
 
