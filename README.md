@@ -19,6 +19,8 @@ $ sudo npm install -g rock-paper-scissors-rukkiesman
 ## Gameplay
 [![asciicast](https://asciinema.org/a/VELEvV5fGtcO25puCUFY8OBV9.svg)](https://asciinema.org/a/VELEvV5fGtcO25puCUFY8OBV9)
 
-## License
+## Project Status
+The project is completed.
 
+## License
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
